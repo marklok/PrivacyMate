@@ -33,6 +33,7 @@ button[type="submit"] {
     color: white;
     border: none;
     cursor: pointer;
+    align-items: center;
 }
 
 .result-container {
