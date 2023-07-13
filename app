@@ -2,9 +2,9 @@ from flask import Flask, render_template, request, session
 import openai
 import os
 from dotenv import load_dotenv
-from llama_index import SimpleDirectoryReader, GPTListIndex, readers, GPTSimpleVectorIndex, LLMPredictor, PromptHelper, ServiceContext
-from langchain import OpenAI
-from IPython.display import Markdown, display
+#from llama_index import SimpleDirectoryReader, GPTListIndex, readers, GPTSimpleVectorIndex, LLMPredictor, PromptHelper, ServiceContext
+#from langchain import OpenAI
+#from IPython.display import Markdown, display
 
 # Load environment variables
 load_dotenv()
