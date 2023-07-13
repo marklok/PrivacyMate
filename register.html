@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        table {
+            max-width: 600px;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #270b45;
+            color: #270b45;
+        }
+
+        thead {
+            background-color: #ffec9a;
+            color: white;
+        }
+
+        a {
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+            color: #270b45;
+            padding: 5px 10px;
+            background-color: #ffec9a;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registered Products</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Summary</th>
+                <th>Feedback</th>
+                <th>Risk Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in registered_products %}
+                <tr>
+                    <td>{{ product.product_name }}</td>
+                    <td>{{ product.summary }}</td>
+                    <td>{{ product.feedback }}</td>
+                    <td>{{ product.risk_rating }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Register another product</a>
+    <a href="/result">Go back to result</a>
+</body>
+</html>
